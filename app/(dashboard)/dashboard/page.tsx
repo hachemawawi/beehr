@@ -1,9 +1,9 @@
 import React from "react";
 
-const Portal = () => {
+const Dashboard = () => {
   return(
 
-   <div>Portal</div>
+   <div>Dashboard</div>
   );
 }
-export default Portal;
+export default Dashboard;

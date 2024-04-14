@@ -1,9 +1,18 @@
 import React from "react";
+import WelcomeBanner from "./WelcomeBanner";
+import { getCurrentUser } from "@/lib/session";
+import { User } from "@prisma/client";
+import  Calendar  from "./Calendar";
 
-const Dashboard = () => {
+const Portal = async () => {
+    const user = await getCurrentUser();
+    
   return(
+    <>
+    <WelcomeBanner user= {user as User} />
+    <Calendar />
+    </>
 
-   <div>Dashboard</div>
   );
 }
-export default Dashboard;
+export default Portal;
