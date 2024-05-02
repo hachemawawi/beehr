@@ -34,9 +34,9 @@ const SideBarDrawer = ({ user }: SideBarDrawerProps) => {
       <SheetContent side="left" className="flex flex-col justify-between w-52">
         <div>
           <div className="flex mt-3 justify-center">
-            <Image src="/spana-b.png" width={50} height={50} alt="logo" />
+            <Image src="/beeHR.svg" width={50} height={50} alt="logo" />
           </div>
-          <nav className="flex flex-col items-center px-3 overflow-y-auto">
+          <nav className="flex flex-col items-start px-3 overflow-y-auto">
             {user?.role === "ADMIN" && adminRouter()}
             {user?.role === "USER" && userRouter()}
             {user?.role === "MODERATOR" && moderatorRouter()}

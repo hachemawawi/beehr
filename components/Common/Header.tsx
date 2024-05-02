@@ -11,10 +11,16 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Container from "./Container"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import SideBarDrawer from "./SideBarDrawer";
+import ToggleDarkLight from "./ToggleDarkLight";
+import { User } from "@prisma/client";
+import LogoutBtn from "./LogoutBtn";
 
+type HeaderProps = {
+  user: User;
+};
 
-
-const Header = () => {
+const Header = ({ user }: HeaderProps) => {
   return (
     <Container>
       <header className=" z-10 bg-white rounded-md shadow-sm dark:bg-black dark:border-b ">
@@ -23,6 +29,7 @@ const Header = () => {
             {/* LEFT SIDE */}
             <div className="flex justify-start items-center">
               {" "}
+              <SideBarDrawer user={user} />{" "}
             </div>
 
             {/* RIGHT SIDE  */}
@@ -32,7 +39,7 @@ const Header = () => {
                 <PiBellRingingDuotone size={28} />
               </button>
               <Avatar>
-                <AvatarImage src={""} alt="hashem" />
+                <AvatarImage src={user?.image as string} alt="hachem" />
                 <AvatarFallback>US</AvatarFallback>
               </Avatar>
 
@@ -43,13 +50,14 @@ const Header = () => {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56">
-                  <DropdownMenuLabel></DropdownMenuLabel>
+                  <DropdownMenuLabel>{user?.name}</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>Profile</DropdownMenuItem>
                   <DropdownMenuItem>Support</DropdownMenuItem>
 
                   <div className="flex flex-col items-center space-y-6 ">
-                    
+                    <LogoutBtn />
+                    <ToggleDarkLight />
                   </div>
 
                   <DropdownMenuSeparator />

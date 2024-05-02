@@ -61,7 +61,7 @@ model User {
   role          Role       @default(USER)
   phone         String?
   title         String?
-  manager       String?
+  moderator       String?
   department    String?
   accounts      Account[] 
   sessions      Session[]
@@ -86,7 +86,7 @@ enum LeaveStatus {
 model Leave {
   id            String      @id @default(cuid())
   type          String
-  year String @default("")
+  year          String @default("")
   startDate     DateTime
   endDate       DateTime
   days          Int

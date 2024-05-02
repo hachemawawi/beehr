@@ -1,8 +1,6 @@
 import AuthComponent from "@/components/Other/AuthComponent";
 
 const LoginPage = () => {
-    return(
-   <AuthComponent />
-    ); 
+    <AuthComponent/>
 }
 export default LoginPage;
