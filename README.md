@@ -17,48 +17,6 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Tech Stack
-
-This project is built with the following technologies:
-
-- **Language:** TypeScript
-- **Frontend:**
-  - React (v18)
-  - Next.js (App Router)
-  - Tailwind CSS (with tailwindcss-animate, tailwind-merge)
-  - **shadcn/ui** (component library)
-  - Radix UI (UI primitives)
-  - Kendo React OrgChart (organization chart component)
-  - Lucide React (icons)
-  - React Hook Form (forms)
-  - React Day Picker (date picker)
-  - React Hot Toast (notifications)
-  - Next Themes (theme switching)
-  - React Icons
-- **Backend/API:**
-  - Next.js API routes
-  - Prisma ORM
-  - Zod (validation)
-- **Authentication:**
-  - NextAuth.js
-  - Clerk (authentication integration)
-  - @auth/prisma-adapter
-- **Database:**
-  - PostgreSQL (managed via Prisma ORM)
-- **Utilities:**
-  - Date-fns, Dayjs (date utilities)
-  - Class Variance Authority, clsx (className utilities)
-  - Cmdk (command menu)
-  - Vaul (modals/dialogs)
-- **Development/Tooling:**
-  - TypeScript
-  - ESLint
-  - PostCSS
-  - Tailwind CSS
-  - Prisma
-
----
-
 ### Summary Table
 
 | Layer        | Stack/Library/Tool                                                                                                                             |
